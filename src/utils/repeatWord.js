@@ -8,7 +8,9 @@ export function repeatWord(word, count) {
         words = 'Введенные данные не верны. Проверьте, что слово было введено и число повторений больше 0';
     } else {
         for (let i = 1; i <= count; i++) {
-            words += word + i + ',';
+            if (i === count) {
+                words += word + i;
+            } else words += word + i + ',';
         }
     }
     return words;
